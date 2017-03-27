@@ -1,8 +1,10 @@
 ---
-title: "HW6"
-author: "Vicki Hertzberg"
-date: "3/15/2017"
-output: html_document
+title: "Homework 6"
+author: "Alan Jones"
+date: "3/22/2017"
+output:
+  word_document: default
+  html_document: default
 ---
 
 ```{r setup, include=FALSE}
@@ -17,6 +19,23 @@ Please document that you have installed the necessary packages and downloaded th
 
 1. Document that you have installed `dada2` and `phyloseq`, as well as `shortread` and `ggplot2`. Use the installation guide at the dada2 site: (http://benjjneb.github.io/dada2/index.html)[http://benjjneb.github.io/dada2/index.html].
 
+```{r}
+library(dada2); packageVersion("dada2")
+```
+
+```{r}
+library(phyloseq); packageVersion("phyloseq")
+```
+
+```{r}
+library(ggplot2); packageVersion("ggplot2")
+```
+
+```{r}
+library(ShortRead); packageVersion("ShortRead")
+```
+
+
 - Sufficient documentation would consist of the following R commands (in an R chunk, of course), one line per required package:
 
 library(*package_name*); packageVersion("*package_name*");
@@ -30,6 +49,29 @@ library(*package_name*); packageVersion("*package_name*");
 - the RDP species assignmet set from the same site as the RDP training set. Again, do not unzip it but DO store it in the same directory as the miseq files.
 
 - You can provide evidence that you have downloaded these files with the following commands (in an R chunk):
+
+```{r}
+#my current working directory
+getwd()
+```
+
+```{r}
+path <- "C:/Users/medman1025/Desktop/School/Lesson-9" # CHANGE THIS to the directory containing the fastq files after unzipping
+fns <- list.files(path)
+fns
+```
+
+```{r}
+path <- "C:/Users/medman1025/Desktop/School/Lesson-9" # CHANGE THIS to the directory containing the fastq files after unzipping
+fns <- list.files(path)
+fns
+```
+
+```{r}
+path <- "C:/Users/medman1025/Desktop/School/Lesson-9" # CHANGE THIS to the directory containing the fastq files after unzipping
+fns <- list.files(path)
+fns
+```
 
 path <- "~/MiSeq_SOP" # CHANGE THIS to the directory containing the fastq files after unzipping
 fns <- list.files(path)
